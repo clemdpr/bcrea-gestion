@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B.CREA · Personnalisation d'objets à Manduel</title>
+<meta name="description" content="B.CREA, atelier de personnalisation d'objets et de tissus à Manduel (Gard) : cadeaux personnalisés, mariages, naissances, Octobre rose, commandes pour les entreprises.">
+<meta property="og:title" content="B.CREA · Personnalisation d'objets à Manduel">
+<meta property="og:description" content="Donnez vie à vos idées : créations uniques et personnalisées, dans le Gard.">
+<meta property="og:image" content="images/logo.jpg">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#accueil"><span class="brand-logo"><img src="images/logo.jpg" alt="Logo B.CREA"></span><span>B.CREA</span></a>
+    <div class="end">
+    <nav id="nav" aria-label="Menu principal">
+      <a href="#accueil">Accueil</a>
+      <a href="#une">À la une</a>
+      <a href="#creations">Créations</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#pro">Entreprises</a>
+      <a href="#avis" data-view="avis">Avis</a>
+      <a href="#devis" data-view="devis" class="nav-cta">Demander un devis</a>
+    </nav>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
+    <button type="button" class="theme" id="theme" aria-label="Changer de thème (clair ou sombre)" title="Clair / sombre"><svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="announce" id="announce" hidden><div class="wrap" id="announce-text"></div></div>
+
+<main>
+<div id="view-home">
+  <div class="wrap hero" id="accueil">
+    <canvas class="petals" id="petals" aria-hidden="true"></canvas>
+    <div>
+      <p class="label">Personnalisation d'objets &amp; tissus · Manduel, Gard</p>
+      <h1>Donnez vie à <em>vos idées</em>.</h1>
+      <p class="lede">Des créations uniques et originales, pour offrir un cadeau mémorable ou ajouter une touche perso à votre quotidien.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#devis">Demander un devis</a>
+        <a class="btn" href="#creations">Découvrir mes créations</a>
+      </div>
+    </div>
+    <div class="atelier" aria-hidden="true">
+      <div class="disc"><img src="images/logo.jpg" alt=""></div>
+      <div class="tag">
+        <b>Pièce unique</b>
+        Exprimez votre créativité, je m'occupe du reste.
+        <span class="label">Personnalisé à Manduel · 30129</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="presentation">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-side"><p class="label">Qui suis-je</p><h2>B.CREA, l'atelier de personnalisation de Manduel</h2><figure class="about-photo" id="about-photo" hidden><img alt="La créatrice de B.CREA dans son atelier"></figure></div>
+        <div class="about-text" id="about-text">
+          <p>Derrière B.CREA, il y a Béatrice, qui transforme vos idées en objets uniques depuis septembre 2024, dans son atelier de Manduel, dans le Gard.</p>
+          <p>Porte-clés, piluliers, miroirs de poche, gobelets, plaques, cadres, paniers garnis ou décoration de mariage : chaque pièce est personnalisée pour une personne et une occasion précises.</p>
+          <p>Sublimation, gravure, flocage : j'adapte la technique à chaque objet. Vous avez une idée, un prénom, une date, un logo ? Exprimez votre créativité, je m'occupe du reste.</p>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>Réponse sous 24 h</b><span>Votre demande est étudiée rapidement, avec un devis clair à valider.</span></li>
+        <li><b>Toutes les occasions</b><span>Anniversaires, naissances, mariages, fêtes, Octobre rose…</span></li>
+        <li><b>Envoi partout en France</b><span>Par Mondial Relay ou Chronopost, ou remise en main propre selon conditions.</span></li>
+      </ul>
+    </div>
+  </section>
+  <section class="une-home" id="une-home" hidden>
+    <div class="wrap">
+      <div class="head">
+        <div><p class="label">À la une</p><h2>En ce moment chez B.CREA</h2></div>
+        <a class="btn" href="#une">Tout voir</a>
+      </div>
+      <div class="news-grid" id="news-home"></div>
+    </div>
+  </section>
+
+  <div class="ribbon-wrap" aria-hidden="true"><div class="ribbon"><div class="ribbon-track"><span>Anniversaire<i>✿</i></span><span>Naissance<i>✿</i></span><span>Mariage<i>✿</i></span><span>Fête des mères<i>✿</i></span><span>Octobre rose<i>✿</i></span><span>Noël<i>✿</i></span><span>Cadeaux de témoins<i>✿</i></span><span>Fête des pères<i>✿</i></span><span>Merci maîtresse<i>✿</i></span><span>Juste pour soi<i>✿</i></span><span>Entreprises<i>✿</i></span><span>Anniversaire<i>✿</i></span><span>Naissance<i>✿</i></span><span>Mariage<i>✿</i></span><span>Fête des mères<i>✿</i></span><span>Octobre rose<i>✿</i></span><span>Noël<i>✿</i></span><span>Cadeaux de témoins<i>✿</i></span><span>Fête des pères<i>✿</i></span><span>Merci maîtresse<i>✿</i></span><span>Juste pour soi<i>✿</i></span><span>Entreprises<i>✿</i></span></div></div></div>
+
+  <section class="discover">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="label">Mes créations</p><h2>Envie de découvrir mes créations ?</h2></div>
+        <p>Un petit aperçu de pièces déjà réalisées. Toutes les autres vous attendent sur la page Créations.</p>
+      </div>
+      <div class="carousel" role="region" aria-roledescription="carrousel" aria-label="Aperçu des créations">
+        <div class="track" id="car-track" tabindex="0"></div>
+        <button type="button" class="car-btn prev" id="car-prev" aria-label="Photo précédente"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="car-btn next" id="car-next" aria-label="Photo suivante"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="center-cta"><a class="btn solid" href="#creations">Voir toutes mes créations</a></div>
+    </div>
+  </section>
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <div><p class="label">Envie de passer commande ?</p><h2>Demandez votre devis gratuit</h2><p class="cta-sub">Décrivez votre idée : je vous réponds sous 24 heures avec une proposition.</p><p class="hint" id="home-rating"></p></div>
+      <div class="ctas"><a class="btn solid" href="#devis">Demander un devis</a><a class="btn" href="#avis">Lire les avis</a></div>
+    </div>
+  </section>
+</div>
+
+<div id="view-creations" hidden>
+  <section class="page-top page-intro">
+    <div class="wrap">
+      <p class="label">Créations</p>
+      <h1 class="page-h">Mes créations</h1>
+      <p class="lede">Tout ce que je personnalise, les réalisations déjà livrées et les occasions pour lesquelles vous pouvez me solliciter.</p>
+    </div>
+  </section>
+  <section id="categories" class="first">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="label">Ce que je personnalise</p><h2>Des objets du quotidien aux grands jours</h2></div>
+        <p>Prénom, date, dessin, citation ou logo : chaque pièce est faite pour une personne et une occasion précises.</p>
+      </div>
+      <div class="cols">
+        <article class="cat">
+          <h3><svg viewBox="0 0 32 32"><path d="M6 9h16v14a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4V9Z"/><path d="M22 12h2.5a3.5 3.5 0 0 1 0 7H22"/><path d="M11 4c-1 1.5 1 2.5 0 4M16 4c-1 1.5 1 2.5 0 4"/></svg>Objets du quotidien</h3>
+          <p>Les petites choses de tous les jours, à votre image.</p>
+          <ul>
+            <li>Porte-clés</li><li>Piluliers</li>
+            <li>Miroirs de poche</li><li>Gobelets isothermes</li>
+            <li>Vaporisateurs de poche</li><li>Porte-cartes</li>
+            <li>Portefeuilles</li><li>Brosses à cheveux</li>
+            <li>Horloges</li><li>Lampes LED</li>
+            <li>Tabliers &amp; maniques</li><li>Pochettes</li>
+          </ul>
+        </article>
+        <article class="cat">
+          <h3><svg viewBox="0 0 32 32"><path d="M5 13h22v5H5zM7 18h18v10H7zM16 13v15"/><path d="M16 13c-3-1-7-3-5.5-6S16 9 16 13Zm0 0c3-1 7-3 5.5-6S16 9 16 13Z"/></svg>Fêtes &amp; événements</h3>
+          <p>Pour marquer le coup, du cadeau seul à la décoration de toute une salle.</p>
+          <ul>
+            <li>Panneaux de mariage</li><li>Marque-places</li>
+            <li>Cadeaux de témoins</li><li>Plaques &amp; cadres</li>
+            <li>Cadres Scrabble</li><li>Paniers garnis</li>
+            <li>Coffrets cadeaux</li><li>Panneaux déco</li>
+          </ul>
+        </article>
+      </div>
+      <p class="note">Vous ne voyez pas votre idée ? <a href="#devis">Décrivez-la-moi</a>, on trouve ensemble le bon support.</p>
+    </div>
+  </section>
+
+  <section id="realisations">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="label">Réalisations</p><h2>Quelques créations déjà livrées</h2></div>
+        <p>Chaque pièce a été imaginée avec son ou sa destinataire. La vôtre sera tout aussi unique.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrer les réalisations">
+        <button type="button" data-f="all" aria-pressed="true">Tout</button>
+        <button type="button" data-f="mariage" aria-pressed="false">Mariage</button>
+        <button type="button" data-f="fetes" aria-pressed="false">Fêtes &amp; famille</button>
+        <button type="button" data-f="objets" aria-pressed="false">Objets perso</button>
+        <button type="button" data-f="coffrets" aria-pressed="false">Paniers &amp; coffrets</button>
+        <button type="button" data-f="octobre" aria-pressed="false">Octobre rose</button>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <section class="occ" id="occasions">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="label">Pour quelles occasions</p><h2>Un cadeau qui ne ressemble qu'à la personne</h2></div>
+        <p>Pour un proche, un grand jour ou une cause qui vous tient à cœur.</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Anniversaire</span>
+        <span class="chip"><i>18</i> ans</span>
+        <span class="chip">Mariage</span>
+        <span class="chip">Cadeaux de <i>témoins</i></span>
+        <span class="chip">Fête des mères &amp; des pères</span>
+        <span class="chip"><i>Octobre</i> rose</span>
+        <span class="chip">Noël</span>
+        <span class="chip">Un <i>merci</i></span>
+        <span class="chip">Juste pour <i>soi</i></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <div><p class="label">Une idée vous plaît ?</p><h2>Demandez votre devis</h2></div>
+      <div class="ctas"><a class="btn solid" href="#devis">Demander un devis</a></div>
+    </div>
+  </section>
+</div>
+
+<div id="view-une" hidden>
+  <section class="page-top page-intro">
+    <div class="wrap">
+      <p class="label">À la une</p>
+      <h1 class="page-h">À la une</h1>
+      <p class="lede">Les créations du moment et les prochains marchés et événements où retrouver B.CREA.</p>
+    </div>
+  </section>
+  <section class="first"><div class="wrap"><div class="news-grid" id="news-all"></div></div></section>
+</div>
+
+<div id="view-boutique" hidden>
+  <section class="page-top page-intro">
+    <div class="wrap">
+      <p class="label">Boutique</p>
+      <h1 class="page-h">Prêtes à offrir</h1>
+      <p class="lede">Des créations déjà réalisées, sans personnalisation, disponibles tout de suite. Le stock est tenu à jour par la créatrice.</p>
+      <p class="pay-line">Paiement par PayPal, Revolut ou espèces en main propre · Envoi en France · <a href="#infos">Infos pratiques</a></p>
+    </div>
+  </section>
+  <section class="first"><div class="wrap"><div class="shop-grid" id="shop-grid"></div></div></section>
+</div>
+
+<div id="view-pro" hidden>
+  <section class="page-top pro-hero">
+    <div class="wrap pro-grid">
+      <div>
+        <p class="label">Entreprises · associations · collectivités</p>
+        <h1 class="page-h">Vos commandes <em>professionnelles</em>, en direct avec la créatrice</h1>
+        <p class="lede">Cadeaux clients, objets à votre logo, goodies pour un salon, cadeaux de fin d'année ou pour vos équipes : B.CREA personnalise vos objets en petites et moyennes séries.</p>
+        <ul class="pro-points">
+          <li><b>Un seul interlocuteur</b><span>Vous échangez directement avec la créatrice, du devis à la livraison.</span></li>
+          <li><b>Votre logo, vos couleurs</b><span>Envoyez votre logo ou votre charte : le visuel vous est soumis avant fabrication.</span></li>
+          <li><b>Devis et facture</b><span>Un devis détaillé, puis une facture en bonne et due forme pour votre comptabilité.</span></li>
+        </ul>
+      </div>
+      <aside class="pro-card">
+        <p class="label">Contact direct</p>
+        <div class="direct" id="pro-contact"><p class="hint">Utilisez le formulaire ci-dessous : la réponse vous arrive par email.</p></div>
+        <a class="btn solid" href="#pro-form-anchor" id="pro-go">Faire une demande</a>
+      </aside>
+    </div>
+  </section>
+  <section class="first" id="pro-form-anchor">
+    <div class="wrap contact">
+      <div class="where">
+        <div><p class="label">Demande professionnelle</p><h2>Décrivez votre projet</h2></div>
+        <p>Quantité, délai, budget, logo : plus votre demande est précise, plus le devis sera juste. Vous recevez un devis détaillé à valider avant toute fabrication.</p>
+      </div>
+      <div class="devis-col">
+      <form class="slip" id="pro-form" novalidate>
+        <div class="row">
+          <div class="field"><label for="p-company">Entreprise ou structure *</label><input id="p-company" autocomplete="organization" maxlength="80"></div>
+          <div class="field"><label for="p-name">Nom et prénom *</label><input id="p-name" autocomplete="name" maxlength="60"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="p-email">Email professionnel *</label><input id="p-email" type="email" autocomplete="email" maxlength="120"></div>
+          <div class="field"><label for="p-phone">Téléphone</label><input id="p-phone" type="tel" autocomplete="tel" maxlength="20"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="p-need">Votre besoin</label><select id="p-need"><option>Cadeaux clients ou partenaires</option><option>Objets à votre logo (goodies)</option><option>Salon, séminaire ou événement</option><option>Cadeaux pour vos salariés (CSE)</option><option>Association, club ou école</option><option>Autre</option></select></div>
+          <div class="field"><label for="p-siret">SIRET</label><input id="p-siret" maxlength="20" placeholder="Facultatif"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="p-qte">Quantité estimée</label><input id="p-qte" type="number" min="1" inputmode="numeric" placeholder="Ex. : 50"></div>
+          <div class="field"><label for="p-budget">Budget indicatif</label><input id="p-budget" maxlength="40" placeholder="Ex. : 500 €"></div>
+        </div>
+        <div class="field"><label for="p-date">Pour quand ?</label><input id="p-date" maxlength="60" placeholder="Ex. : livraison avant le 15 décembre"></div>
+        <div class="field"><label for="p-idee">Votre projet *</label><textarea id="p-idee" maxlength="3000" placeholder="Objets souhaités, personnalisation, occasion, livraison…"></textarea></div>
+        <p class="hint">Un logo, une charte ou des exemples à joindre ? Envoyez-le en réponse à mon email, ou par Messenger.</p>
+        <input type="checkbox" name="botcheck" id="p-bot" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn solid" id="p-send">Envoyer ma demande</button>
+        <p class="hint" id="p-status" aria-live="polite"></p>
+      </form>
+      <div class="slip done" id="pro-done" hidden tabindex="-1">
+        <span class="done-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h2>Demande envoyée</h2>
+        <p class="done-msg">Votre demande de devis vient d’être envoyée et transmise à B.Créa.</p>
+        <p class="reply-time">Réponse sous 24 heures par email.</p>
+        <pre id="pro-recap"></pre>
+        <div class="ctas" style="margin-top:0"><button type="button" class="btn" id="pro-again">Faire une autre demande</button><a class="btn" href="#accueil">Retour à l'accueil</a></div>
+      </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="view-infos" hidden>
+  <section class="page-top page-intro">
+    <div class="wrap">
+      <p class="label">Infos pratiques</p>
+      <h1 class="page-h">Comment se passe une commande</h1>
+      <p class="lede">Tout ce qu'il faut savoir avant de commander : paiement, délais, livraison, annulation. Et les réponses aux questions qu'on me pose le plus souvent.</p>
+    </div>
+  </section>
+  <section class="first">
+    <div class="wrap">
+      <div class="info-grid">
+        <article class="info-card"><h3>Commander</h3><p>Envoyez votre demande depuis la page Demander un devis ou par Messenger. Je vous réponds sous 24 heures avec un devis, valable 30 jours.</p></article>
+        <article class="info-card"><h3>Acompte et paiement</h3><p>Un acompte est demandé avant la fabrication, payable uniquement par virement. Son montant varie selon le prix des fournitures. Le reste se règle par PayPal, Revolut ou en espèces lors d'une remise en main propre.</p></article>
+        <article class="info-card"><h3>Prix</h3><p>Les prix sont fixes : ils sont indiqués sur le site ou sur votre devis. Les frais de port varient selon l'article et sont précisés avant la commande.</p></article>
+        <article class="info-card"><h3>Délais</h3><p>Le délai de fabrication dépend de votre commande : il vous est indiqué sur le devis.</p></article>
+        <article class="info-card"><h3>Livraison</h3><p>Envoi uniquement en France, par Mondial Relay ou Chronopost. Une remise en main propre est possible sous certaines conditions, à convenir ensemble.</p></article>
+        <article class="info-card"><h3>Annulation</h3><p>Une commande personnalisée avec des éléments personnels (photos, prénoms…) ne peut pas être annulée. Une personnalisation classique, sans ajout personnel, peut être annulée dans les 48 heures maximum.</p></article>
+        <article class="info-card"><h3>Colis abîmé</h3><p>Vérifiez votre colis à la réception. S'il est endommagé, émettez des réserves auprès du transporteur et prévenez-moi rapidement avec des photos.</p></article>
+        <article class="info-card"><h3>Me contacter</h3><p>Par Messenger ou par email à b.crea30@gmail.com. Réponse sous 24 heures.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="faq">
+    <div class="wrap">
+      <div class="head"><div><p class="label">FAQ</p><h2>Vos questions</h2></div></div>
+      <div class="faq">
+        <article><h3>Puis-je commander un seul objet ?</h3><p>Oui, la commande est possible dès un seul objet.</p></article>
+        <article><h3>Puis-je envoyer mon propre visuel ou mon logo ?</h3><p>Oui. Ajoutez-le directement à votre demande de devis, en photo ou en PDF.</p></article>
+        <article><h3>Est-ce que je vois le rendu avant la fabrication ?</h3><p>Oui, sur demande : je vous envoie un aperçu de l'image avant de lancer la fabrication.</p></article>
+        <article><h3>Quelles techniques utilisez-vous ?</h3><p>La sublimation, différentes gravures et le flocage, selon l'objet et le rendu souhaité.</p></article>
+        <article><h3>Comment payer ?</h3><p>L'acompte, demandé avant la fabrication, se paie uniquement par virement. Le reste se règle par PayPal, par Revolut, ou en espèces lors d'une remise en main propre.</p></article>
+        <article><h3>Livrez-vous à l'étranger ?</h3><p>Non, les envois se font uniquement en France.</p></article>
+        <article><h3>Faites-vous des commandes pour les entreprises ?</h3><p>Oui : cadeaux clients, objets à votre logo, événements. Faites votre demande sur la page Entreprises.</p></article>
+      </div>
+      <div class="center-cta"><a class="btn solid" href="#devis">Demander un devis</a></div>
+    </div>
+  </section>
+</div>
+
+<div id="view-legal" hidden>
+  <section class="page-top page-intro">
+    <div class="wrap">
+      <p class="label">Informations légales</p>
+      <h1 class="page-h">Mentions légales, confidentialité et CGV</h1>
+    </div>
+  </section>
+  <section class="first legal">
+    <div class="wrap legal-wrap">
+      <nav class="legal-nav" aria-label="Sections"><a href="#mentions">Mentions légales</a><a href="#confidentialite">Confidentialité</a><a href="#cgv">Conditions générales de vente</a></nav>
+      <div class="legal-body">
+
+      <article id="mentions">
+        <h2>Mentions légales</h2>
+        <h3>Éditrice du site</h3>
+        <p>Béatrice Blaise, entrepreneur individuel (auto-entrepreneur), sous le nom commercial B.CREA.</p>
+        <p>Adresse : Manduel (30129).</p>
+        <p>SIRET : 932 272 016 00019.</p>
+        <p>Contact : b.crea30@gmail.com ou Messenger (page Facebook B.CREA).</p>
+        <p>Directrice de la publication : Béatrice Blaise.</p>
+        <h3>Hébergement</h3>
+        <p>Ce site est hébergé par GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+        <h3>Conception</h3>
+        <p>Site créé à l'aide de Claude par Clémence Despierre.</p>
+        <h3>Propriété intellectuelle</h3>
+        <p>Les textes, photos, créations et le logo B.CREA sont la propriété de Béatrice Blaise. Il est interdit de copier ou d'utiliser les informations et les images de ce site sans autorisation préalable.</p>
+      </article>
+
+      <article id="confidentialite">
+        <h2>Politique de confidentialité</h2>
+        <h3>Données collectées</h3>
+        <p>Lorsque vous envoyez une demande de devis ou une demande professionnelle, B.CREA reçoit les informations que vous saisissez : nom, prénom, entreprise, email, téléphone et détails de votre projet. Le site lui-même n'enregistre aucune de ces données.</p>
+        <h3>Utilisation</h3>
+        <p>Ces données servent uniquement à répondre à votre demande, établir vos devis et factures, et suivre votre commande. Elles ne sont jamais vendues ni utilisées pour de la publicité.</p>
+        <h3>Destinataires et durée de conservation</h3>
+        <p>Votre demande est transmise par email à Béatrice Blaise via le service Web3Forms, qui l'achemine sans la revendre. Seule Béatrice Blaise y a accès. Les demandes sans suite sont supprimées au bout de 3 ans. Les factures sont conservées 10 ans, comme l'exige la loi.</p>
+        <h3>Vos droits</h3>
+        <p>Vous pouvez demander l'accès, la correction ou la suppression de vos données, ou vous opposer à leur utilisation, en écrivant à b.crea30@gmail.com. Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr).</p>
+        <h3>Cookies</h3>
+        <p>Ce site n'utilise aucun cookie de suivi ni de publicité. Il mémorise seulement, dans votre navigateur, votre choix d'affichage clair ou sombre.</p>
+      </article>
+
+      <article id="cgv">
+        <h2>Conditions générales de vente</h2>
+        <h3>Commande</h3>
+        <p>Toute commande fait l'objet d'un devis, valable 30 jours. La commande est confirmée par l'acceptation du devis et le versement de l'acompte.</p>
+        <h3>Prix et paiement</h3>
+        <p>Les prix sont indiqués en euros. TVA non applicable, article 293 B du Code général des impôts. Les frais de port, variables selon l'article, sont indiqués avant la commande. Un acompte est demandé avant la fabrication ; il est payable uniquement par virement bancaire. Le solde est réglé selon les modalités indiquées sur le devis, par PayPal, Revolut ou en espèces lors d'une remise en main propre.</p>
+        <h3>Livraison</h3>
+        <p>Les envois se font uniquement en France, par Mondial Relay ou Chronopost. Une remise en main propre peut être organisée sous certaines conditions. À la réception, vérifiez votre colis : s'il est endommagé, émettez des réserves auprès du transporteur et prévenez B.CREA rapidement avec des photos.</p>
+        <h3>Annulation</h3>
+        <p>Une commande personnalisée avec des éléments personnels (photos, prénoms, textes) ne peut pas être annulée. Une personnalisation classique, sans ajout personnel, peut être annulée dans un délai de 48 heures après la commande.</p>
+        <h3>Droit de rétractation</h3>
+        <p>Les objets personnalisés selon vos demandes sont exclus du droit de rétractation (article L221-28 du Code de la consommation). Pour les articles de la boutique vendus sans personnalisation et expédiés, vous disposez de 14 jours après la réception pour vous rétracter ; les frais de retour sont à votre charge et le remboursement intervient sous 14 jours.</p>
+        <h3>Garanties</h3>
+        <p>Les produits bénéficient de la garantie légale de conformité (articles L217-3 et suivants du Code de la consommation) et de la garantie des vices cachés (articles 1641 et suivants du Code civil).</p>
+        <h3>Litiges et médiation</h3>
+        <p>En cas de désaccord, contactez d'abord B.CREA pour trouver une solution amiable. Vous pouvez ensuite recourir gratuitement au médiateur de la consommation.</p>
+      </article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="view-avis" hidden>
+  <section class="page-top">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="label">Avis clients</p><h1 class="page-h">Vos avis</h1></div>
+        <p>Vous avez reçu une création B.CREA ? Quelques mots et une note aident d'autres personnes à se lancer.</p>
+      </div>
+      <div class="reviews">
+        <aside class="summary">
+          <div id="rv-summary"></div>
+          <div class="rv-form">
+            <span class="label">Laisser un avis</span>
+            <p>Laissez votre avis sur la page Facebook de B.CREA, ou envoyez-le par email : il sera ajouté ici.</p>
+            <a class="btn solid small-btn" href="https://www.facebook.com/profile.php?id=61564861842129&amp;sk=reviews" target="_blank" rel="noopener">Donner mon avis sur Facebook</a>
+            <p class="hint">Par email : <b>b.crea30@gmail.com</b></p>
+          </div>
+        </aside>
+        <div class="list" id="rv-list"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="view-devis" hidden>
+  <section class="page-top">
+    <div class="wrap contact">
+      <div class="where">
+        <div><p class="label">Devis gratuit</p><h1 class="page-h">Demander un devis</h1></div>
+        <p>Décrivez votre idée : B.CREA revient vers vous avec une proposition. Une photo ou un modèle ? Vous pourrez l'envoyer en réponse.</p>
+        <div class="place"><b>Manduel, Gard</b>30129 · entre Nîmes et Beaucaire</div>
+        <div class="place"><b>Réponse sous 24 heures</b>Devis valable 30 jours · acompte avant fabrication</div>
+        <div class="place"><b>Paiement</b>Acompte par virement, puis PayPal, Revolut ou espèces en main propre</div>
+        <div class="place"><b>Livraison</b>En France par Mondial Relay ou Chronopost, ou remise en main propre selon conditions · <a href="#infos">tout savoir</a></div>
+        <div class="place"><b>Facebook &amp; Messenger</b><a href="https://www.facebook.com/profile.php?id=61564861842129" target="_blank" rel="noopener">B.CREA sur Facebook</a></div>
+        <div class="direct" id="devis-contact" hidden></div>
+        <p class="hint">Email : <b>b.crea30@gmail.com</b></p>
+        <p class="hint">Vous êtes une entreprise ou une association ? <a href="#pro">Faites votre demande sur l'espace Entreprises</a>.</p>
+      </div>
+
+      <div class="devis-col">
+      <form class="slip" id="devis-form" novalidate>
+        <div class="item-chip" id="f-item" hidden><span id="f-item-text"></span><button type="button" class="link-btn muted" id="f-item-x">Retirer</button></div>
+        <div class="row">
+          <div class="field"><label for="f-nom">Prénom *</label><input id="f-nom" autocomplete="given-name" maxlength="40"></div>
+          <div class="field"><label for="f-email">Email *</label><input id="f-email" type="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="vous@exemple.fr"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="Facultatif"></div>
+          <div class="field"><label for="f-support">Support</label><select id="f-support"><option>Porte-clés</option><option>Pilulier</option><option>Miroir de poche</option><option>Gobelet isotherme</option><option>Vaporisateur de poche</option><option>Porte-cartes / portefeuille</option><option>Brosse à cheveux</option><option>Horloge</option><option>Lampe LED</option><option>Tablier / manique</option><option>Pochette</option><option>Plaque / cadre</option><option>Cadre Scrabble</option><option>Panier garni / coffret</option><option>Décoration de mariage</option><option>Article de la boutique</option><option>Autre</option></select></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-occ">Occasion</label><input id="f-occ" maxlength="80" placeholder="Ex. : anniversaire, mariage…"></div>
+          <div class="field"><label for="f-qte">Quantité</label><input id="f-qte" type="number" min="1" value="1" inputmode="numeric"></div>
+        </div>
+        <div class="field"><label for="f-idee">Votre idée *</label><textarea id="f-idee" maxlength="2000" placeholder="Texte, prénom, couleurs, style… Plus c'est précis, plus le devis sera juste."></textarea></div>
+        <div class="row">
+          <div class="field"><label for="f-date">Pour quand ?</label><input id="f-date" maxlength="60" placeholder="Ex. : avant le 15 décembre"></div>
+          <div class="field"><label for="f-deliv">Réception</label><select id="f-deliv"><option>Envoi Mondial Relay</option><option>Envoi Chronopost</option><option>Remise en main propre (selon conditions)</option></select></div>
+        </div>
+        <p class="hint">Une photo, un dessin ou un logo à joindre ? Envoyez-le en réponse à mon email, ou par Messenger.</p>
+        <input type="checkbox" name="botcheck" id="f-bot" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn solid" id="f-send">Envoyer ma demande</button>
+        <p class="hint" id="f-status" aria-live="polite"></p>
+
+        <div class="out" id="f-fallback" hidden>
+          <span class="label">Votre message</span>
+          <p class="hint">L'envoi direct n'a pas fonctionné. Copiez votre message et envoyez-le sur Messenger ou à b.crea30@gmail.com.</p>
+          <pre id="msg"></pre>
+          <div class="ctas" style="margin-top:0">
+            <button type="button" class="btn solid" id="copy">Copier le message</button>
+            <a class="btn" href="https://m.me/61564861842129" target="_blank" rel="noopener">Ouvrir Messenger</a>
+          </div>
+          <p class="hint" id="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="slip done" id="devis-done" hidden tabindex="-1">
+        <span class="done-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h2>Demande envoyée</h2>
+        <p class="done-msg">Votre demande de devis vient d’être envoyée et transmise à B.Créa.</p>
+        <p class="reply-time">Réponse sous 24 heures par email.</p>
+        <pre id="done-recap"></pre>
+        <div class="ctas" style="margin-top:0"><button type="button" class="btn" id="devis-again">Faire une autre demande</button><a class="btn" href="#accueil">Retour à l'accueil</a></div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section id="etapes">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="label">Comment ça marche</p><h2>De l'idée à la pièce finie</h2></div>
+        <p>Vous validez le visuel avant toute fabrication.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Vous m'écrivez</h3><p>Le support, le texte ou le dessin, la quantité et la date souhaitée.</p></li>
+        <li><h3>Je vous propose</h3><p>Un visuel et un devis adaptés à votre idée et à votre budget.</p></li>
+        <li><h3>Vous validez</h3><p>On ajuste couleurs, police et placement jusqu'à ce que ce soit parfait.</p></li>
+        <li><h3>Je crée</h3><p>Votre pièce est réalisée avec soin, puis remise en main propre ou envoyée.</p></li>
+      </ol>
+    </div>
+  </section>
+
+</div>
+<div id="view-prive" hidden>
+  <section class="page-top admin-page">
+    <div class="wrap">
+      <div class="admin-top">
+        <div><h1 class="page-h">Espace privé</h1></div>
+        <div class="tools" id="adm-actions" hidden><a class="btn solid small-btn" href="gestion/">Gestion boutique</a> <button type="button" class="btn small-btn" id="adm-logout">Se déconnecter</button></div>
+      </div>
+      <div class="login-wrap" id="adm-login">
+        <div class="panel">
+          <h3 id="lg-title">Connexion</h3>
+          <form class="stack" id="lg-form" novalidate>
+            <div class="field" id="lg-email-f"><label for="lg-email">Email</label><input id="lg-email" type="email" autocomplete="username" inputmode="email"></div>
+            <div class="field" id="lg-pass-f"><label for="lg-pass">Mot de passe</label><input id="lg-pass" type="password" autocomplete="current-password"></div>
+            <div class="field" id="lg-code-f" hidden><label for="lg-code">Code à 6 chiffres</label><input id="lg-code" inputmode="numeric" autocomplete="one-time-code" maxlength="6"></div>
+            <div class="field" id="lg-new-f" hidden><label for="lg-new">Nouveau mot de passe</label><input id="lg-new" type="password" autocomplete="new-password"></div>
+            <div class="tools"><button type="submit" class="btn solid small-btn" id="lg-send">Se connecter</button><button type="button" class="link-btn muted" id="lg-forgot">Mot de passe oublié ?</button></div>
+            <p class="hint" id="lg-st" aria-live="polite"></p>
+          </form>
+          <p class="hint" id="lg-off" hidden>L'espace privé n'est pas encore activé : renseignez les deux codes Supabase dans le fichier js/config.js.</p>
+        </div>
+      </div>
+      <div id="adm-content" hidden>
+        <div class="tabs" role="tablist" aria-label="Rubriques de l'espace privé" id="adm-tabs"></div>
+        <div id="adm-panels"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="edit-bar" id="edit-bar" hidden>
+  <div class="wrap edit-inner">
+    <span><b>Mode modification des textes</b> <span class="hint" id="edit-count">Cliquez sur un texte pour le modifier.</span></span>
+    <span class="tools"><button type="button" class="btn solid small-btn" id="edit-save">Enregistrer</button><button type="button" class="btn small-btn" id="edit-quit">Quitter</button></span>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="foot-copy">© 2026 B.CREA · Personnalisation d'objets &amp; tissus · Manduel (30)</span>
+    <span class="foot-links"><a href="#infos">Infos pratiques</a><a href="#faq">FAQ</a><a href="#mentions">Mentions légales</a><a href="#confidentialite">Confidentialité</a><a href="#cgv">CGV</a><a href="https://www.facebook.com/profile.php?id=61564861842129" target="_blank" rel="noopener">Facebook</a><a href="#prive" rel="nofollow">Accès privé</a></span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/site.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
